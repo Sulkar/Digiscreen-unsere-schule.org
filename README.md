@@ -4,6 +4,20 @@ Digiscreen ist ein interaktiver Bildschirm für den Präsenz- oder Fernunterrich
 
 Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schriftarten Abril Fat Face, Orbitron und Material Icons (Apache License Version 2.0) und der Schriftart HKGrotesk (Sil Open Font License 1.1)
 
+## Logik
+### Import Digiboard
+- Digiscreen wird als JSON exportiert und als .dgs Datei gespeichert.
+- Beim Import einer .dgs Datei wird diese in **App.vue** in der Methode **importer (event)** geparst.
+- Im Anschluss werden der App z.B.: die Karten aus der JSON Datei zugewiesen: `this.panneaux = donnees.panneaux`
+- Sobald sich etwas an `this.panneaux` ändert, wird die **watch: {}** Methode ausgeführt und die `this.panneaux in panneauxPage` übertragen.
+- Zum Schluss wir durch alle Elemente von `panneauxPage` iteriert und die Karten erstellt: `<template v-for="panneau in panneauxPage">` 
+
+## Local Storage am Beispiel Zufälliger Name
+- Der Component **tirage-texte.vue** wird aufgerufen, wenn ein Screen importiert wurde oder wenn eine neue Karte vom gleichen Typ erstellt wird.
+- In der `created()` Methode wird geschaut, ob ein Text bereits vorhanden ist (aus der importierten Datei). Ist kein Text vorhanden wird im localStorage('tirage_texte') gesucht.
+- Eingegebene Texte werden in der localStorage() gespeichert, wenn der Nutzer auf den Button "Bestätigung" klickt.
+
+## RUN
 ### Letzter Abgleich mit original Repo von Codeberg
 https://codeberg.org/ladigitale/digiboard (Commit vom 25.09.2022)
 

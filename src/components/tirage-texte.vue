@@ -119,9 +119,14 @@ export default {
 		} else if (this.panneau.statut === 'min') {
 			this.minimiser()
 		}
+		//Texte aus importierten Datei vorhanden
 		if (this.panneau.contenu !== '') {
 			this.texte = this.panneau.contenu.texte
 			this.suppression = this.panneau.contenu.suppression
+		}
+		// wenn kein Text aus einer importierten .dgs Datei vorhanden ist, suche in der localStorage
+		else if (localStorage.getItem('tirage_texte')) {
+			this.texte = localStorage.getItem('tirage_texte')
 		}
 		if (this.mode === 'lecture' && this.texte !== '') {
 			this.redimensionnement = true
@@ -138,9 +143,13 @@ export default {
 		}
 	},
 	methods: {
-		generer () {
+		//Button: Bestätigen
+		generer () {		
 			const items = this.texte.split(',').map(item => item.trim())
 			if (items.length > 1) {
+				//set local texte to localStorage
+				localStorage.setItem('tirage_texte', this.texte);
+
 				this.mode = 'lecture'
 				this.redimensionnement = true
 				if (this.donnees.w > 0 && this.donnees.h > 0) {
