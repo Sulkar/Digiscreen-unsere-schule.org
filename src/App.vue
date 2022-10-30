@@ -326,7 +326,8 @@ export default {
 		}
 	},
 	watch: {
-		page: function (page) {
+		//Page
+		page: function (page) {			
 			this.annotation = false
 			this.exportDonnees = true
 			this.$nextTick(function () {
@@ -342,12 +343,14 @@ export default {
 				}
 			}.bind(this))
 		},
+		//Karten
 		panneaux: function () {
 			const panneaux = this.panneaux.filter(function (element) {
 				return element.page === this.page
 			}.bind(this))
 			this.panneauxPage = panneaux
 		},
+		//Nav
 		nav: function (nav) {
 			if (nav) {
 				this.hauteur = document.body.clientHeight - this.$convertirRem(7.5)
@@ -440,6 +443,7 @@ export default {
 		document.querySelector('main').addEventListener('drop', function (event) {
 			event.preventDefault()
 			event.stopPropagation()
+
 			if (event.dataTransfer.files && event.dataTransfer.files.length > 0) {
 				for (let i = 0; i < event.dataTransfer.files.length; i++) {
 					if (event.dataTransfer.files[i].type.substring(0, 5) === 'image' || event.dataTransfer.files[i].type.substring(0, 5) === 'audio' || event.dataTransfer.files[i].type.substring(0, 5) === 'video') {
@@ -605,6 +609,7 @@ export default {
 				break
 			}
 		},
+		//editPanel
 		modifierPanneau (donnees) {
 			this.panneaux.forEach(function (panneau, index) {
 				if (panneau.id === donnees.id) {
@@ -621,6 +626,7 @@ export default {
 				}
 			}.bind(this))
 		},
+		//closePanel
 		fermerPanneau (id) {
 			this.panneaux.forEach(function (panneau, index) {
 				if (panneau.id === id) {
@@ -669,6 +675,7 @@ export default {
 		afficherPage (page) {
 			this.page = page
 		},
+		//Digiscreen importiert
 		importer (event) {
 			const fichier = event.target.files[0]
 			if (fichier === null || fichier.length === 0) {
@@ -678,10 +685,13 @@ export default {
 				this.importDonnees = true
 				const reader = new FileReader()
 				reader.onload = function (e) {
+					//.dgs Datei ist eine JSON Datei die geparst wird
 					const donnees = JSON.parse(e.target.result)
 					this.pages = donnees.pages
 					this.page = donnees.page
+					//modulleiste
 					this.modules = donnees.modules
+					//Karten die auf der Tafel sind, z.B.: Gruppeneinteilung, Würfel, ...
 					this.panneaux = donnees.panneaux
 					this.langue = donnees.langue
 					this.$root.$i18n.locale = donnees.langue
