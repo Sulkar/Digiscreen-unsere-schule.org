@@ -1,21 +1,23 @@
 # Digiscreen
 
-Digiscreen est un fond d'écran interactif pour la classe en présence ou à distance. 
+Digiscreen ist ein interaktiver Bildschirm für den Präsenz- oder Fernunterricht im Klassenzimmer.
 
-L'application est publiée sous licence GNU GPLv3.
-Sauf les fontes Abril Fat Face, Orbitron et Material Icons (Apache License Version 2.0) et la fonte HKGrotesk (Sil Open Font Licence 1.1)
+Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schriftarten Abril Fat Face, Orbitron und Material Icons (Apache License Version 2.0) und der Schriftart HKGrotesk (Sil Open Font License 1.1)
 
-### Préparation et installation des dépendances
+### Letzter Abgleich mit original Repo von Codeberg
+https://codeberg.org/ladigitale/digiboard (Commit vom 25.09.2022)
+
+### Installation
 ```
 npm install
 ```
 
-### Lancement du serveur de développement
+### Run development server
 ```
 npm run serve
 ```
 
-### Compilation et minification des fichiers
+### Build Digiscreen
 ```
 npm run build
 ```
@@ -27,9 +29,11 @@ VUE_APP_PIXABAY_API_KEY (clé API Pixabay)
 ```
 
 ### Production
-Le dossier dist peut être déployé directement sur un serveur de fichier. Cette version compilée n'intègre pas les clés API Pixabay et Google pour YouTube.
+Der dist-Ordner kann direkt auf einem Dateiserver bereitgestellt werden. Diese kompilierte Version enthält nicht die Pixabay- und Google-API-Schlüssel für YouTube.
 
-### Démo
+### Demo
+https://digiboard.unsere-schule.org/
+oder
 https://ladigitale.dev/digiscreen/
 
 ### Remerciements et crédits
@@ -44,6 +48,6 @@ Traduction en allemand lors d'une action dans « la salle des profs » [#twitter
 Traduction en croate par Ksenija Lekić (https://gitlab.com/Ksenija66L)
 
 
-### Soutien
+### Spenden
 https://opencollective.com/ladigitale
 
