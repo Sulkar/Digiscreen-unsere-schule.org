@@ -19,6 +19,7 @@
 			<span v-for="element in (grille.colonnes * grille.lignes)" :key="'element_' + element" />
 		</div>
 
+		<!-- Karten Icons -->
 		<nav v-if="!alerte" :class="{'masque': !nav}" :data-html2canvas-ignore="true">
 			<div @click="creerPanneau('codeqr')" v-if="modules.includes('codeqr')" :title="$t('codeqr')">
 				<span class="icone"><i class="material-icons">qr_code</i></span>
@@ -368,6 +369,7 @@ export default {
 			this.chargement = false
 		}.bind(this), false)
 
+		//locals
 		const langues = ['fr', 'en', 'it', 'es', 'nl', 'de', 'hr']
 		const params = new URLSearchParams(document.location.search)
 		let langue = params.get('lang')
@@ -384,6 +386,11 @@ export default {
 		}
 		this.$root.$i18n.locale = this.langue
 		document.getElementsByTagName('html')[0].setAttribute('lang', this.langue)
+
+		//load modules from localStorage
+		if(localStorage.getItem('modules')){
+			this.modules = JSON.parse(localStorage.getItem('modules'));
+		}
 
 		this.recupererVoix()
 		if (window.speechSynthesis.onvoiceschanged !== undefined) {
@@ -734,7 +741,7 @@ export default {
 				this.fermerModale()
 			}.bind(this))
 		},
-		modifierModule (event) {
+		modifierModule (event) {		
 			const module = event.target.value
 			if (event.target.checked === true) {
 				this.modules.push(module)
@@ -742,6 +749,8 @@ export default {
 				const index = this.modules.indexOf(module)
 				this.modules.splice(index, 1)
 			}
+			//update localStorage with current selected modules
+			localStorage.setItem('modules', JSON.stringify(this.modules));
 		},
 		recupererVoix () {
 			this.listeVoix = window.speechSynthesis.getVoices().sort(function (a, b) {
