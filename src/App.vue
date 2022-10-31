@@ -294,7 +294,7 @@ export default {
 			hauteur: 0,
 			pages: [{ fond: './static/img/quadrillage.png', grille: {}, annotations: {}, annotation: false }],
 			page: 1,
-			modules: ['codeqr', 'texte', 'image', 'galerie', 'dessin', 'document', 'audio', 'video', 'lien', 'iframe', 'nuage', 'ordre', 'trous', 'tirage-texte', 'tirage-image', 'plateau', 'des', 'groupes', 'chrono', 'rebours', 'horloge', 'calendrier', 'retroaction', 'grille'],
+			modules: ['codeqr', 'texte', 'image', 'galerie', 'dessin', 'document', 'audio', 'video', 'lien', 'iframe', 'ordre', 'trous', 'tirage-texte', 'tirage-image', 'plateau', 'des', 'groupes', 'chrono', 'rebours', 'horloge', 'calendrier', 'retroaction', 'grille'],
 			panneaux: [],
 			panneauxPage: [],
 			langue: 'de',

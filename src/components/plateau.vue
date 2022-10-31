@@ -77,7 +77,7 @@ export default {
 			statut: '',
 			dimensions: {},
 			donnees: { w: 0, h: 0, x: 0, y: 0 },
-			image: './static/img/plateau/plateau.png',
+			image: './static/img/plateau/plateau.jpg',
 			pions: 2,
 			chargementImage: false
 		}
