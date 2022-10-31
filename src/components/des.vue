@@ -159,11 +159,18 @@ export default {
 			this.positionner()
 		},
 		jeter () {
-			this.resultats = []
-			for (let i = 0; i < this.des; i++) {
-				const resultat = Math.floor(Math.random() * (6 - 1 + 1) + 1);
-				this.resultats.push(resultat)
-			}
+			//new dice animation
+			const tirageEnCours = setInterval(function () {
+				this.resultats = []
+				for (let i = 0; i < this.des; i++) {
+					const resultat = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+					this.resultats.push(resultat);
+				}
+			}.bind(this), 100)
+			setTimeout(function () {
+				clearInterval(tirageEnCours)
+			}.bind(this), 1000)
+			//play dice audio
 			const audio = document.querySelector('#audio-de')
 			this.$lireAudio(audio)
 		}

@@ -187,7 +187,7 @@ export default {
 				let tirage = this.items[Math.floor(Math.random() * this.items.length)]
 				this.tirage = tirage
 				this.tirageEnCours = true
-			}.bind(this), 5)
+			}.bind(this), 50)
 			setTimeout(function () {
 				clearInterval(tirageEnCours)
 				this.tirageEnCours = false

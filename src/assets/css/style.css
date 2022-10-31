@@ -819,7 +819,7 @@ nav .separateur {
 }
 
 .panneau .conteneur .bouton.verifier {
-	width: 11rem;
+	/*width: 11rem;*/
 	vertical-align: middle;
 }
 
@@ -828,7 +828,7 @@ nav .separateur {
 	color: #fff;
     background: #00b894;
 	cursor: default;
-	width: 11rem;
+	/*width: 11rem;*/
 	vertical-align: middle;
 }
 
