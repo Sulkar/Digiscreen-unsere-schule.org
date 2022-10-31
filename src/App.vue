@@ -662,7 +662,7 @@ export default {
 		},
 		capturer () {
 			html2canvas(document.body, { useCORS: true }).then(function (canvas) {
-				saveAs(canvas.toDataURL('image/jpeg', 0.95).replace('image/jpeg', 'image/octet-stream'), 'capture_' + (new Date()).getTime() + '.jpg')
+				saveAs(canvas.toDataURL('image/jpeg', 0.95).replace('image/jpeg', 'image/octet-stream'), 'Digiscreen_' + (new Date()).getTime() + '.jpg')
 			})
 		},
 		annoter () {

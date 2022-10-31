@@ -6,17 +6,7 @@
 				<span class="fermer" role="button" tabindex="0" @click="$parent.fermerMenu"><i class="material-icons">close</i></span>
 			</header>
 			<div class="conteneur">
-				<div class="contenu">
-					<label>{{ $t('langue') }}</label>
-					<div class="langue">
-						<span :class="{'selectionne': $parent.langue === 'fr'}" @click="modifierLangue('fr')">FR</span>
-						<span :class="{'selectionne': $parent.langue === 'es'}" @click="modifierLangue('es')">ES</span>
-						<span :class="{'selectionne': $parent.langue === 'it'}" @click="modifierLangue('it')">IT</span>
-						<span :class="{'selectionne': $parent.langue === 'de'}" @click="modifierLangue('de')">DE</span>
-						<span :class="{'selectionne': $parent.langue === 'nl'}" @click="modifierLangue('nl')">NL</span>
-						<span :class="{'selectionne': $parent.langue === 'hr'}" @click="modifierLangue('hr')">HR</span>
-						<span :class="{'selectionne': $parent.langue === 'en'}" @click="modifierLangue('en')">EN</span>
-					</div>
+				<div class="contenu">					
 
 					<label>{{ $t('arrierePlanPage') }}</label>
 					<div class="fond">
@@ -287,6 +277,18 @@
 							</label>
 						</div>
 					</div>
+
+					<label>{{ $t('langue') }}</label>
+					<div class="langue">
+						<span :class="{'selectionne': $parent.langue === 'fr'}" @click="modifierLangue('fr')">FR</span>
+						<span :class="{'selectionne': $parent.langue === 'es'}" @click="modifierLangue('es')">ES</span>
+						<span :class="{'selectionne': $parent.langue === 'it'}" @click="modifierLangue('it')">IT</span>
+						<span :class="{'selectionne': $parent.langue === 'de'}" @click="modifierLangue('de')">DE</span>
+						<span :class="{'selectionne': $parent.langue === 'nl'}" @click="modifierLangue('nl')">NL</span>
+						<span :class="{'selectionne': $parent.langue === 'hr'}" @click="modifierLangue('hr')">HR</span>
+						<span :class="{'selectionne': $parent.langue === 'en'}" @click="modifierLangue('en')">EN</span>
+					</div>
+					
 				</div>
 			</div>
 		</div>
