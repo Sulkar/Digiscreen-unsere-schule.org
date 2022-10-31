@@ -1132,3 +1132,8 @@ nav .separateur {
 	padding: 5px;
     border-radius: 10px;
 }
+
+.linkDecoration{
+    text-decoration: underline;
+    color: blue;
+}

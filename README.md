@@ -17,6 +17,9 @@ Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schrif
 - In der `created()` Methode wird geschaut, ob ein Text bereits vorhanden ist (aus der importierten Datei). Ist kein Text vorhanden wird im localStorage('tirage_texte') gesucht.
 - Eingegebene Texte werden in der localStorage() gespeichert, wenn der Nutzer auf den Button "Bestätigung" klickt.
 
+### Höhe, Breite eines Moduls verändern
+- In **App.vue** werden unter `creerPanneau (type)` die einzelnen Module mit w: und h: erstellt. Hier kann die Höhe angepasst werden.
+
 ## RUN
 ### Letzter Abgleich mit original Repo von Codeberg
 https://codeberg.org/ladigitale/digiboard (Commit vom 25.09.2022)

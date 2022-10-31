@@ -16,6 +16,8 @@
 				<div class="contenu inactif">
 					<label>{{ $t('lienContenuLigne') }}</label>
 					<input type="search" :value="lien" @input="lien = $event.target.value" @keydown.enter="generer">
+					<div class="separateur"><span>z.B.:</span></div>
+					<label style=""><a href="https://learningapps.org/" target="_blank" class="linkDecoration">Learning Apps</a></label>
 					<span class="bouton" role="button" tabindex="0" @click="generer">{{ $t('valider') }}</span>
 				</div>
 			</div>
@@ -208,6 +210,34 @@ export default {
 	animation: rotation 0.7s linear infinite;
 }
   
+  .panneau .panneau-iframe .separateur {
+    position: relative;
+    margin: 2rem 25% 2rem;
+    text-align: center;
+    width: 50%;
+}
+
+.panneau .panneau-iframe .separateur::before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.panneau .panneau-iframe .separateur span {
+    position: relative;
+    margin: 0;
+    font-size: 1.5rem;
+    z-index: 2;
+    display: inline-block;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    vertical-align: middle;
+    background-color: #fff;
+}
 @keyframes rotation {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }

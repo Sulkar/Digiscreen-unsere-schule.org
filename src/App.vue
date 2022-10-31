@@ -569,7 +569,7 @@ export default {
 				this.panneaux.push({ page: this.page, id: id, type: type, mode: '', statut: '', dimensions: {}, contenu: '', w: 40, h: 28, x: largeur - this.$convertirRem(20), y: hauteur - this.$convertirRem(14), z: z })
 				break
 			case 'iframe':
-				this.panneaux.push({ page: this.page, id: id, type: type, mode: '', statut: '', dimensions: {}, contenu: '', w: 40, h: 22, x: largeur - this.$convertirRem(20), y: hauteur - this.$convertirRem(11), z: z })
+				this.panneaux.push({ page: this.page, id: id, type: type, mode: '', statut: '', dimensions: {}, contenu: '', w: 40, h: 30, x: largeur - this.$convertirRem(20), y: hauteur - this.$convertirRem(11), z: z })
 				break
 			case 'nuage':
 				this.panneaux.push({ page: this.page, id: id, type: type, mode: '', statut: '', dimensions: {}, contenu: '', w: 80, h: 59.5, x: largeur - this.$convertirRem(40), y: hauteur - this.$convertirRem(29.75), z: z })
