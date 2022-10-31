@@ -1125,3 +1125,10 @@ nav .separateur {
 		font-size: 56.25%;
 	}
 }
+
+
+.pageSelectBackground{
+	background-color: grey;
+	padding: 5px;
+    border-radius: 10px;
+}

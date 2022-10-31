@@ -200,8 +200,9 @@
 		<MInfo v-else-if="modale === 'info'" />
 		<MParametres v-if="menu" />
 
+		<!-- bei mehreren Seiten wird eine Seitennavigation angzeigt. --> 
 		<div id="pages" :class="{'noir': Object.keys(pages[page - 1].grille).length > 0 && (pages[page - 1].grille.couleur === 'blanc' || pages[page - 1].grille.couleur === 'gris')}" v-if="pages.length > 1">
-			<div>
+			<div class="pageSelectBackground">
 				<span :class="{'selectionne': page === index}" @click="afficherPage(index)" v-for="index in pages.length" :key="'page_' + index" />
 			</div>
 		</div>

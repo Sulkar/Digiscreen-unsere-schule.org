@@ -12,7 +12,7 @@ Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schrif
 - Sobald sich etwas an `this.panneaux` ändert, wird die **watch: {}** Methode ausgeführt und die `this.panneaux in panneauxPage` übertragen.
 - Zum Schluss wir durch alle Elemente von `panneauxPage` iteriert und die Karten erstellt: `<template v-for="panneau in panneauxPage">` 
 
-## Local Storage am Beispiel Zufälliger Name
+### Local Storage am Beispiel Zufälliger Name
 - Der Component **tirage-texte.vue** wird aufgerufen, wenn ein Screen importiert wurde oder wenn eine neue Karte vom gleichen Typ erstellt wird.
 - In der `created()` Methode wird geschaut, ob ein Text bereits vorhanden ist (aus der importierten Datei). Ist kein Text vorhanden wird im localStorage('tirage_texte') gesucht.
 - Eingegebene Texte werden in der localStorage() gespeichert, wenn der Nutzer auf den Button "Bestätigung" klickt.
