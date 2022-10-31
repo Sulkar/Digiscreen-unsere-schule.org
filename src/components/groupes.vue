@@ -116,6 +116,9 @@ export default {
 			this.texte = this.panneau.contenu.texte
 			this.personnes = this.panneau.contenu.personnes
 			this.groupes = this.panneau.contenu.groupes
+		}// wenn kein Text aus einer importierten .dgs Datei vorhanden ist, suche in der localStorage
+		else if (localStorage.getItem('groupes')) {
+			this.texte = localStorage.getItem('groupes')
 		}
 		if (this.mode === 'lecture') {
 			this.redimensionnement = true
@@ -138,8 +141,10 @@ export default {
 				let liste = this.texte.split(',').map(item => item.trim())
 				liste = liste.filter(item => item !== '')
 				liste = this.$melanger(liste)
-				const nombrePersonnes = parseInt(this.personnes)
+				const nombrePersonnes = parseInt(this.personnes);
 				if (liste.length > 0 && nombrePersonnes > 0) {
+					//save names to localStorage
+					localStorage.setItem('groupes', this.texte);
 					let nombreGroupes = Math.ceil(liste.length / nombrePersonnes)
 					let indexPersonne = 0
 					while (nombreGroupes > 0) {
