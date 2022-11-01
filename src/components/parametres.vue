@@ -50,7 +50,7 @@
 						<span @click="modifierFond('./static/img/quadrillage-gris-grand.png')">
 							<img src="@/assets/img/miniatures/quadrillage-gris-grand.png" alt="Quadrillage gris grand" style="border: 1px solid #ddd;">
 						</span>
-						<span class="couleur-fond" @click="modifierFond('#00ced1')" style="background-color: #00ced1;" />
+						<span class="couleur-fond" @click="modifierFond('tomato')" style="background-color: tomato;" />
 						<span class="couleur-fond" @click="modifierFond('#ff2d55')" style="background-color: #ff2d55;" />
 						<span class="couleur-fond" @click="modifierFond('#f7d000')" style="background-color: #f7d000;" />
 						<span class="couleur-fond" @click="modifierFond('#dddddd')" style="background-color: #dddddd;" />
@@ -726,11 +726,11 @@ export default {
 }
 
 .menu .modules .module .interrupteur input:checked + .curseur {
-	background-color: #00ced1;
+	background-color: tomato;
 }
 
 .menu .modules .module .interrupteur input:focus + .curseur {
-	box-shadow: 0 0 1px #00ced1;
+	box-shadow: 0 0 1px tomato;
 }
 
 .menu .modules .module .interrupteur input:checked + .curseur::before {

@@ -134,7 +134,7 @@
 				<span class="titre">{{ $t('grille') }}</span>
 			</div>
 			<div class="separateur">
-				<span>·</span>
+				<span>|</span>
 			</div>
 			<div @click="capturer" :title="$t('capture')">
 				<span class="icone"><i class="material-icons">camera</i></span>

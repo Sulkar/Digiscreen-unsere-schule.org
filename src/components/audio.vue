@@ -246,7 +246,7 @@ export default {
 .panneau .panneau-audio .chargement {
 	display: inline-block;
 	border: 7px solid #ddd;
-	border-top: 7px solid #00ced1;
+	border-top: 7px solid tomato;
 	border-radius: 50%;
 	width: 45px;
 	height: 45px;

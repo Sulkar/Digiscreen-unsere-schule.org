@@ -268,7 +268,7 @@ export default {
 
 .panneau .panneau-tirage-image .zone {
 	height: 7rem;
-	border: 2px dashed #00ced1;
+	border: 2px dashed tomato;
 	cursor: pointer;
 }
 

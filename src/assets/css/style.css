@@ -412,8 +412,9 @@ nav .separateur {
 	width: auto;
 	line-height: 4.1rem;
 	color: #fff;
-	font-size: 4rem;
-	margin: 0;
+	font-size: 6rem;
+	
+	margin: -20px 0 0 0;
 	flex: 0;
 	cursor: default;
 }
@@ -690,7 +691,7 @@ nav .separateur {
 	padding: 0;
 	font: inherit;
 	outline: none;
-	color: #00ced1;
+	color: tomato;
 	opacity: 0.8;
 	background: #ddd;
 	box-sizing: border-box;
@@ -763,9 +764,9 @@ nav .separateur {
 	line-height: 4rem;
 	padding: 0 2rem;
 	cursor: pointer;
-	color: #001d1d;
+	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-	background: #00ced1;
+	background: tomato;
 	border-radius: 0.5rem;
 	margin-top: 2rem;
 	letter-spacing: 1px;
@@ -799,7 +800,7 @@ nav .separateur {
 	display: inline-block;
 	font-size: 3.6rem;
 	cursor: pointer;
-	color: #00ced1;
+	color: tomato;
 	margin-top: 0;
 	user-select: none;
 	-webkit-touch-callout: none;
@@ -896,8 +897,8 @@ nav .separateur {
 	height: 4.5rem;
 	justify-content: space-between;
 	align-items: center;
-	color: #222;
-	background: #00ced1;
+	color: #fff;
+	background: tomato;
 }
 
 .modale header {

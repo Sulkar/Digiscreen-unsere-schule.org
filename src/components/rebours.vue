@@ -47,7 +47,7 @@
 				<div class="contenu inactif" v-else>
 					<div class="rebours">
 						<svg :height="$convertirRem(42)" :width="$convertirRem(42)" :class="{'actif': this.mode === 'decompte'}" :style="{'animation': 'rebours ' + dureeMs + 'ms linear forwards', 'stroke-dasharray': Math.PI * 2 * $convertirRem(20.2), 'stroke-dashoffset': Math.PI * 2 * $convertirRem(20.2)}">
-							<circle :cx="$convertirRem(21)" :cy="$convertirRem(21)" :r="$convertirRem(20.2)" stroke="#00ced1" :stroke-width="$convertirRem(1.6)" fill="#f9f9f9" />
+							<circle :cx="$convertirRem(21)" :cy="$convertirRem(21)" :r="$convertirRem(20.2)" stroke="tomato" :stroke-width="$convertirRem(1.6)" fill="#f9f9f9" />
 						</svg>
 						<div class="decompte">
 							<span class="heures" v-if="affichageHeures === 'oui'">{{ texteHeures }}</span>

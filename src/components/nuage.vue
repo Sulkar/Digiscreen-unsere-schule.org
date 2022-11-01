@@ -35,7 +35,7 @@
 									<div class="spinner"><div /><div /><div /><div /><div /><div /><div /><div /><div /><div /><div /><div /></div>
 								</div>
 							</div>
-							<vue-word-cloud :animation-duration="200" animation-easing="ease-in-out" :animation-overlap="1" color="#00ced1" :font-family="'Baloo Bhaijaan'" :load-font="chargerPolice" :spacing="1/2" :words="nuage" @update:progress="modifierProgression">
+							<vue-word-cloud :animation-duration="200" animation-easing="ease-in-out" :animation-overlap="1" color="tomato" :font-family="'Baloo Bhaijaan'" :load-font="chargerPolice" :spacing="1/2" :words="nuage" @update:progress="modifierProgression">
 								<template slot-scope="{text}">
 									<div :title="text" style="cursor: default;">
 										{{ text }}
@@ -65,7 +65,7 @@
 							<div class="spinner"><div /><div /><div /><div /><div /><div /><div /><div /><div /><div /><div /><div /></div>
 						</div>
 					</div>
-					<vue-word-cloud :animation-duration="200" animation-easing="ease-in-out" :animation-overlap="1" color="#00ced1" :font-family="'Baloo Bhaijaan'" :load-font="chargerPolice" :spacing="1/2" :words="nuage" @update:progress="modifierProgression">
+					<vue-word-cloud :animation-duration="200" animation-easing="ease-in-out" :animation-overlap="1" color="tomato" :font-family="'Baloo Bhaijaan'" :load-font="chargerPolice" :spacing="1/2" :words="nuage" @update:progress="modifierProgression">
 						<template slot-scope="{text}">
 							<div :title="text" style="cursor: default;">
 								{{ text }}
@@ -465,7 +465,7 @@ export default {
 	width: 5px;
     height: 25px;
 	border-radius: 20%;
-	background: #00ced1;
+	background: tomato;
 }
 
 .panneau .panneau-nuage .spinner div:nth-child(1) {
