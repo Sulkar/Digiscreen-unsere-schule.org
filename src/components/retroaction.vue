@@ -189,7 +189,7 @@ export default {
 	padding: 0;
 	text-align: center;
 	line-height: 7rem;
-	border: 2px solid tomato;
+	border: 2px solid #46B1E7;
 	border-radius: 50%;
 	letter-spacing: 0;
 	text-indent: 0;
@@ -197,7 +197,7 @@ export default {
 
 .panneau .panneau-retroaction .bouton:hover {
 	border: 2px solid #00acb0;
-	background: tomato;
+	background: #46B1E7;
 }
 
 .panneau .panneau-retroaction .oui {

@@ -268,7 +268,7 @@ export default {
 	font-size: 3.2rem;
 	font-weight: 400;
 	border: none;
-	border-bottom: 1px solid tomato;
+	border-bottom: 1px solid #46B1E7;
 	background-color: #e1feff;
     margin: 0 auto 0.3rem;
 	text-align: left;

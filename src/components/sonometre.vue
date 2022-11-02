@@ -203,7 +203,7 @@ export default {
 	margin-right: 1rem;
 	font-size: 1.7rem;
 	border-radius: 50%;
-	background: tomato;
+	background: #46B1E7;
 	color: #fff;
 	cursor: pointer;
 }

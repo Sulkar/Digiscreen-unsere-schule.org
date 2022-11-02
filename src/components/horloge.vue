@@ -213,7 +213,7 @@ export default {
 	font-family: 'Orbitron', sans-serif;
 	font-size: 4rem;
 	color: #fff;
-	background: tomato;
+	background: #46B1E7;
 	letter-spacing: 0.5rem;
     padding: 2rem;
 	display: flex;

@@ -25,7 +25,7 @@
 				<div class="contenu inactif" v-else>
 					<div class="groupes">
 						<div class="groupe" v-for="(groupe, index) in groupes" :key="'groupe_' + index">
-							<div>Groupe {{ index + 1 }}</div>
+							<div>Gruppe {{ index + 1 }}</div>
 							<ul>
 								<li v-for="(personne, indexPersonne) in groupe" :key="personne + '_' + indexPersonne">{{ personne }}</li>
 							</ul>
@@ -238,4 +238,5 @@ export default {
 .panneau .conteneur .groupe li:last-child {
     margin-bottom: 0;
 }
+
 </style>

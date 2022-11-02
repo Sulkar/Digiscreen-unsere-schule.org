@@ -203,7 +203,7 @@ export default {
 .panneau .panneau-iframe .conteneur-chargement .chargement {
 	display: inline-block;
 	border: 7px solid #ddd;
-	border-top: 7px solid tomato;
+	border-top: 7px solid #46B1E7;
 	border-radius: 50%;
 	width: 45px;
 	height: 45px;
