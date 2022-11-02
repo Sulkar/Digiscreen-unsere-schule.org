@@ -68,6 +68,8 @@ export default {
 	verifier: 'Controleer',
 	bravoExercice: 'Goed gedaan!',
 	remiseOrdre: 'Herschik',
+	//new modules
+	poll: 'Umfrage',
 	heures: 'Uren',
 	minutes: 'Minuten',
 	secondes: 'Seconds',

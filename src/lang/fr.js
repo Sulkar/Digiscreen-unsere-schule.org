@@ -68,6 +68,8 @@ export default {
 	verifier: 'Vérifier',
 	bravoExercice: 'Bravo !',
 	remiseOrdre: 'Remise en ordre',
+	//new modules
+	poll: 'Umfrage',
 	heures: 'Heures',
 	minutes: 'Minutes',
 	secondes: 'Secondes',

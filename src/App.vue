@@ -19,7 +19,7 @@
 			<span v-for="element in (grille.colonnes * grille.lignes)" :key="'element_' + element" />
 		</div>
 
-		<!-- Karten Icons -->
+		<!-- Modul Icons -->
 		<nav v-if="!alerte" :class="{'masque': !nav}" :data-html2canvas-ignore="true">
 			<div @click="creerPanneau('codeqr')" v-if="modules.includes('codeqr')" :title="$t('codeqr')">
 				<span class="icone"><i class="material-icons">qr_code</i></span>
@@ -73,6 +73,11 @@
 				<span class="icone"><i class="material-icons">sort_by_alpha</i></span>
 				<span class="titre">{{ $t('ordre') }}</span>
 			</div>
+			<!-- new modules -->
+			<div @click="creerPanneau('poll')" v-if="modules.includes('poll')" :title="$t('poll')">
+				<span class="icone"><i class="material-icons">interests</i></span>
+				<span class="titre">{{ $t('poll') }}</span>
+			</div>
 			<div @click="creerPanneau('trous')" v-if="modules.includes('trous')" :title="$t('texteATrous')">
 				<span class="icone"><i class="material-icons">wysiwyg</i></span>
 				<span class="titre">{{ $t('trous') }}</span>
@@ -124,7 +129,7 @@
 			<div @click="fermerPanneau('panneau-retroaction')" class="actif" v-else-if="modules.includes('retroaction') && retroaction" :title="$t('retroaction')">
 				<span class="icone"><i class="material-icons">thumb_up</i></span>
 				<span class="titre">{{ $t('retroaction') }}</span>
-			</div>
+			</div>			
 			<div @click="ouvrirModale('grille')" v-if="modules.includes('grille') && Object.keys(grille).length === 0" :title="$t('grille')">
 				<span class="icone"><i class="material-icons">view_module</i></span>
 				<span class="titre">{{ $t('grille') }}</span>
@@ -195,6 +200,8 @@
 			<PCalendrier :panneau="panneau" :largeurPage="largeur" :hauteurPage="hauteur" :finRedimensionnement="finRedimensionnement" :zIndex="zIndex" :export="exportDonnees" @zIndex="zIndex++" @fermer="fermerPanneau" @export="modifierPanneau" v-else-if="panneau.type === 'calendrier'" :key="panneau.id" />
 			<PRetroaction :panneau="panneau" :largeurPage="largeur" :hauteurPage="hauteur" :finRedimensionnement="finRedimensionnement" :zIndex="zIndex" :export="exportDonnees" @zIndex="zIndex++" @fermer="fermerPanneau" @export="modifierPanneau" v-else-if="panneau.type === 'retroaction'" :key="panneau.id" />
 			<PSonometre :panneau="panneau" :largeurPage="largeur" :hauteurPage="hauteur" :finRedimensionnement="finRedimensionnement" :zIndex="zIndex" :export="exportDonnees" @zIndex="zIndex++" @fermer="fermerPanneau" @export="modifierPanneau" v-else-if="panneau.type === 'sonometre'" :key="panneau.id" />
+			<PPoll :panneau="panneau" :largeurPage="largeur" :hauteurPage="hauteur" :finRedimensionnement="finRedimensionnement" :zIndex="zIndex" :export="exportDonnees" @zIndex="zIndex++" @fermer="fermerPanneau" @export="modifierPanneau" v-else-if="panneau.type === 'poll'" :key="panneau.id" />
+
 		</template>
 
 		<MGrille v-if="modale === 'grille'" />
@@ -245,6 +252,9 @@ import PHorloge from '@/components/horloge.vue'
 import PCalendrier from '@/components/calendrier.vue'
 import PRetroaction from '@/components/retroaction.vue'
 import PSonometre from '@/components/sonometre.vue'
+//new modules
+import PPoll from '@/components/poll.vue'
+
 import MGrille from '@/components/grille.vue'
 import MInfo from '@/components/info.vue'
 import MParametres from '@/components/parametres.vue'
@@ -269,6 +279,8 @@ export default {
 		PIframe,
 		PNuage,
 		POrdre,
+		//new module
+		PPoll,
 		PTrous,
 		PTirageTexte,
 		PTirageImage,
@@ -294,7 +306,7 @@ export default {
 			hauteur: 0,
 			pages: [{ fond: './static/img/quadrillage.png', grille: {}, annotations: {}, annotation: false }],
 			page: 1,
-			modules: ['codeqr', 'texte', 'image', 'galerie', 'dessin', 'document', 'audio', 'video', 'lien', 'iframe', 'ordre', 'trous', 'tirage-texte', 'tirage-image', 'plateau', 'des', 'groupes', 'chrono', 'rebours', 'horloge', 'calendrier', 'retroaction', 'grille'],
+			modules: ['codeqr', 'texte', 'image', 'galerie', 'dessin', 'document', 'audio', 'video', 'lien', 'iframe', 'ordre', 'poll', 'trous', 'tirage-texte', 'tirage-image', 'plateau', 'des', 'groupes', 'chrono', 'rebours', 'horloge', 'calendrier', 'retroaction', 'grille'],
 			panneaux: [],
 			panneauxPage: [],
 			langue: 'de',
@@ -614,6 +626,10 @@ export default {
 				break
 			case 'sonometre':
 				this.panneaux.push({ page: this.page, id: id, type: type, mode: '', statut: '', dimensions: {}, contenu: '', w: 40, h: 24, x: largeur - this.$convertirRem(20), y: hauteur - this.$convertirRem(12), z: z })
+				break
+			//new module
+			case 'poll':
+				this.panneaux.push({ page: this.page, id: id, type: type, mode: '', statut: '', dimensions: {}, contenu: '', w: 46, h: 50.4, x: largeur - this.$convertirRem(23), y: hauteur - this.$convertirRem(25.2), z: z })
 				break
 			}
 		},

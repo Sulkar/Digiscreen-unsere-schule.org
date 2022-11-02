@@ -20,6 +20,13 @@ Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schrif
 ### Höhe, Breite eines Moduls verändern
 - In **App.vue** werden unter `creerPanneau (type)` die einzelnen Module mit w: und h: erstellt. Hier kann die Höhe angepasst werden.
 
+### Neues Modul hinzufügen
+- Neues Modul erstellen z.B.: **poll.vue**
+- In **App.vue** neues Modul unter **Modul Icons** hinzufügen, damit es in der Navigation unten erscheint.
+- In **parametres.vue** hinzufügen, damit es unter Einstellungen erscheint und an- und ausgeschaltet werden kann.
+- Modulname muss in den Language-Files: de, en, es, fr, hr, it, nl hinzugefügt werden.
+
+
 ## RUN
 ### Letzter Abgleich mit original Repo von Codeberg
 https://codeberg.org/ladigitale/digiboard (Commit vom 25.09.2022)

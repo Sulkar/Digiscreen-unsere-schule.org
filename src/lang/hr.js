@@ -68,6 +68,8 @@ export default {
 	verifier: 'Provjeri',
 	bravoExercice: 'Well done!',
 	remiseOrdre: 'Preurediti',
+	//new modules
+	poll: 'Umfrage',
 	heures: 'Sati',
 	minutes: 'Minute',
 	secondes: 'Sekunde',

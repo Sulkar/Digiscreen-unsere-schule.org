@@ -68,6 +68,8 @@ export default {
 	verifier: 'Überprüfen',
 	bravoExercice: 'Gut gemacht!',
 	remiseOrdre: 'Sortieren',
+	//new modules
+	poll: 'Umfrage',
 	heures: 'Stunden',
 	minutes: 'Minuten',
 	secondes: 'Sekunden',
