@@ -73,7 +73,7 @@ export default {
 	heures: 'Stunden',
 	minutes: 'Minuten',
 	secondes: 'Sekunden',
-	tempsEcoule: 'Vergangene Zeit',
+	tempsEcoule: 'Zeit abgelaufen',
 	compteRebours: 'Countdown',
 	syntheseVocale: 'Text-to-Speech',
 	texteSynthetiser: 'Text für Sprachausgabe',

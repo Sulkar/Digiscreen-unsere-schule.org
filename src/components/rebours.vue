@@ -46,10 +46,10 @@
 				</div>
 				<div class="contenu inactif" v-else>
 					<div class="rebours">
-						<svg :height="$convertirRem(42)" :width="$convertirRem(42)" :class="{'actif': this.mode === 'decompte'}" :style="{'animation': 'rebours ' + dureeMs + 'ms linear forwards', 'stroke-dasharray': Math.PI * 2 * $convertirRem(20.2), 'stroke-dashoffset': Math.PI * 2 * $convertirRem(20.2)}">
-							<circle :cx="$convertirRem(21)" :cy="$convertirRem(21)" :r="$convertirRem(20.2)" stroke="#46B1E7" :stroke-width="$convertirRem(1.6)" fill="#f9f9f9" />
+						<svg :height="$convertirRem(20)" :width="$convertirRem(20)" :class="{'actif': this.mode === 'decompte'}" :style="{'animation': 'rebours ' + dureeMs + 'ms linear forwards', 'stroke-dasharray': Math.PI * 2 * $convertirRem(9), 'stroke-dashoffset': Math.PI * 2 * $convertirRem(9)}">
+							<circle :cx="$convertirRem(10)" :cy="$convertirRem(10)" :r="$convertirRem(9)" stroke="#46B1E7" :stroke-width="$convertirRem(1)" fill="#f9f9f9" />
 						</svg>
-						<div class="decompte">
+						<div class="decompte" :style="{fontSize: affichageHeures === 'oui' ?  '3rem' : '5rem'}">
 							<span class="heures" v-if="affichageHeures === 'oui'">{{ texteHeures }}</span>
 							<span class="separateur" v-if="affichageHeures === 'oui'">:</span>
 							<span class="minutes">{{ texteMinutes }}</span>
@@ -99,8 +99,8 @@ export default {
 			x: 0,
 			y: 0,
 			z: 0,
-			minw: 42,
-			minh: 22.2,
+			minw: 20,
+			minh: 20,
 			statut: '',
 			dimensions: {},
 			heures: 0,
@@ -191,8 +191,8 @@ export default {
 					this.texteHeures = this.heures
 				}
 				this.dureeMs = (((this.heures * 3600) + (this.minutes * 60) + this.secondes) * 1000) - 1000
-				this.w = 46
-				this.h = 55
+				this.w = 30
+				this.h = 33
 				this.positionner()
 			}
 		},
@@ -306,7 +306,7 @@ export default {
 	justify-content: center;
 	width: 100%;
 	font-family: 'Orbitron', sans-serif;
-	font-size: 5rem;
+	/*font-size: 5rem;*/
 	letter-spacing: 0.5rem;
 	line-height: 1;
 	margin-top: -2.5rem;

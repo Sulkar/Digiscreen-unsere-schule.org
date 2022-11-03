@@ -106,11 +106,12 @@ export default {
 			pollTitle : 'Umfrage',
 			pollVisible : true,
 			pollItems : [
-				{item: "Option 1", letter: "A", counter: 0, color: '#D92B5A'},
-				{item: "Option 2", letter: "B", counter: 0, color: '#4192D9'},
-				{item: "Option 3", letter: "C", counter: 0, color: '#53A658'},
-				{item: "", letter: "D", counter: 0, color: '#F2CA50'},
-				{item: "", letter: "E", counter: 0, color: '#F27329'},
+				
+				{item: "Option 1", letter: "A", counter: 0, color: '#4192D9'},
+				{item: "Option 2", letter: "B", counter: 0, color: '#53A658'},
+				{item: "Option 3", letter: "C", counter: 0, color: '#F2CA50'},
+				{item: "", letter: "D", counter: 0, color: '#F27329'},
+				{item: "", letter: "E", counter: 0, color: '#D92B5A'},
 			],
 			pollCounter: 0,
 		}
