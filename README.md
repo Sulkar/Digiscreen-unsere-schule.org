@@ -4,6 +4,13 @@ Digiscreen ist ein interaktiver Bildschirm für den Präsenz- oder Fernunterrich
 
 Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schriftarten Abril Fat Face, Orbitron und Material Icons (Apache License Version 2.0) und der Schriftart HKGrotesk (Sil Open Font License 1.1)
 
+### Demo
+https://digiscreen.unsere-schule.org/
+
+oder
+
+https://ladigitale.dev/digiscreen/
+
 ## Logik
 ### Import Digiboard
 - Digiscreen wird als JSON exportiert und als .dgs Datei gespeichert.
@@ -25,6 +32,7 @@ Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schrif
 - In **App.vue** neues Modul unter **Modul Icons** hinzufügen, damit es in der Navigation unten erscheint.
 - In **parametres.vue** hinzufügen, damit es unter Einstellungen erscheint und an- und ausgeschaltet werden kann.
 - Modulname muss in den Language-Files: de, en, es, fr, hr, it, nl hinzugefügt werden.
+- Siehe Umfragemodul Commit: https://github.com/Sulkar/Digiscreen-unsere-schule.org/commit/b847e38b8c9f374e445c88fda5cf1b48b5b86aa4
 
 
 ## RUN
@@ -54,11 +62,6 @@ VUE_APP_PIXABAY_API_KEY (clé API Pixabay)
 
 ### Production
 Der dist-Ordner kann direkt auf einem Dateiserver bereitgestellt werden. Diese kompilierte Version enthält nicht die Pixabay- und Google-API-Schlüssel für YouTube.
-
-### Demo
-https://digiboard.unsere-schule.org/
-oder
-https://ladigitale.dev/digiscreen/
 
 ### Remerciements et crédits
 Traduction en italien par Paolo Mauri (https://gitlab.com/maupao) et Roberto Marcolin (nilocram)
