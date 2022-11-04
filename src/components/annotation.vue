@@ -1110,7 +1110,7 @@ export default {
 		},
 		definirCouleurBordure () {
 			if (this.objet === 'selection' && !this.objetVerrouille) {
-				return '#01ced1'
+				return '#46B1E7'
 			} else {
 				return '#ddd'
 			}
@@ -1349,7 +1349,7 @@ export default {
 }
 
 #outils-annotation .outil.actif {
-    background: #01ced1;
+    background: #46B1E7;
 }
 
 #outils-annotation .outil.historique:active {
