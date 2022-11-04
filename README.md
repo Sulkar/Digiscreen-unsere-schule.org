@@ -1,8 +1,12 @@
 # Digiscreen
 
-Digiscreen ist ein interaktiver Bildschirm für den Präsenz- oder Fernunterricht im Klassenzimmer.
+Digiscreen ist ein interaktiver Bildschirm für den Präsenz- oder Fernunterricht im Klassenzimmer, der von [La Digitale](https://ladigitale.dev/) entwickelt wurde.
+
+Offizielles Repository: https://codeberg.org/ladigitale/digiscreen
 
 Die Anwendung wird unter der GNU GPLv3-Lizenz veröffentlicht. Außer den Schriftarten Abril Fat Face, Orbitron und Material Icons (Apache License Version 2.0) und der Schriftart HKGrotesk (Sil Open Font License 1.1)
+
+Dieses Repository beinhaltet eine angepasste Version des Digiscreens für die Webseite https://unsere-schule.org.
 
 ### Demo
 https://digiscreen.unsere-schule.org/
