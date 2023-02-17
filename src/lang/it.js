@@ -189,5 +189,7 @@ export default {
 	galerie: 'Galleria',
 	galerieImages: 'Galleria di immagini',
 	texteGalerie: 'Immagini della galleria',
-	label: 'Etichetta'
+	label: 'Etichetta',
+	cstRsInfo: 'This is a customized version of Digiscreen by teacher Richard Scheglmann. More information on:'
+
 }

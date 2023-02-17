@@ -189,5 +189,6 @@ export default {
 	galerie: 'Galerie',
 	galerieImages: 'Bildergalerie',
 	texteGalerie: 'Bilder in der Galerie',
-	label: 'Label'
+	label: 'Label',
+	cstRsInfo: 'Dies ist eine vom Lehrer Richard Scheglmann angepasste Version von Digiscreen. Weitere Informationen auf:'
 }
